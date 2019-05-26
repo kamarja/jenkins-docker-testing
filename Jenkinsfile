@@ -12,15 +12,15 @@ job('DSLNode') {
         nodejs('NodeJS 10.10.0')
     }
     steps {
-        // shell("npm install")
-        dockerBuildAndPublish {
-            repositoryName('kamarja/docker-example')
-            tag('${GIT_REVISION,length=9}')
-            registoryCredentials('07de667e-2367-40d0-a0b9-bc8cbf6119b3')
-            forcePull(false)
-            forceTag(false)
-            createFingerprints(false)
-            skipDecorate()
-        }
+         shell("npm install")
+        // dockerBuildAndPublish {
+        //     repositoryName('kamarja/docker-example')
+        //     tag('${GIT_REVISION,length=9}')
+        //     registoryCredentials('07de667e-2367-40d0-a0b9-bc8cbf6119b3')
+        //     forcePull(false)
+        //     forceTag(false)
+        //     createFingerprints(false)
+        //     skipDecorate()
+        // }
     }
 }
