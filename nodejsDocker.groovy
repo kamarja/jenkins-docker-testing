@@ -15,7 +15,7 @@ job('DSLNode') {
         dockerBuildAndPublish {
             repositoryName('kamarja/docker-example')
             tag('${GIT_REVISION,length=9}')
-            registoryCredentials('Docker Credentials')
+            registryCredentials('Docker Credentials')
             forcePull(false)
             forceTag(false)
             createFingerprints(false)
